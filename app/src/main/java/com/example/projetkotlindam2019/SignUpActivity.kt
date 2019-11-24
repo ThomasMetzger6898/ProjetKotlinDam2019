@@ -20,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btn_sign_up.setOnClickListener {
+            toast("Bonjour !!")
             signUpUser()
         }
     }
