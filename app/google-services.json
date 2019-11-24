@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "737728010406",
+    "firebase_url": "https://projetkotlindam2019.firebaseio.com",
+    "project_id": "projetkotlindam2019",
+    "storage_bucket": "projetkotlindam2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737728010406:android:1a782e7e217d8a4dce3c67",
+        "android_client_info": {
+          "package_name": "com.example.projetkotlindam2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737728010406-7f0181k4co5tuph8ke5dsiomqaodc7q6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projetkotlindam2019",
+            "certificate_hash": "8071ffcbf3df11d050b21d62740a210888020514"
+          }
+        },
+        {
+          "client_id": "737728010406-l5a525uc75af0t1vnrl3826fpvpo2p4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6X15yriUb6jem_LBIN8vDWX02Xix_0Pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737728010406-l5a525uc75af0t1vnrl3826fpvpo2p4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
