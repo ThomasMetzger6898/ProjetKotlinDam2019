@@ -24,10 +24,10 @@ class HomeFragment : Fragment() {
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val customView: CustomView = root.findViewById(R.id.customView)
-        homeViewModel.value.observe(this, Observer {
+        /*homeViewModel.value.observe(this, Observer {
             val res = it
             customView.array = it.array
-        })
+        })*/
 
         return root
     }

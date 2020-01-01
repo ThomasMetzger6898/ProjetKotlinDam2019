@@ -29,7 +29,8 @@ class CustomView : View,View.OnTouchListener{
     constructor(context: Context) : super(context)
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    {init()
+    {
+        init()
     }
 
 

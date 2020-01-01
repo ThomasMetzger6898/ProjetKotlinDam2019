@@ -12,8 +12,8 @@ class HomeViewModel : ViewModel() {
     private lateinit var context : Context
 
     private val _view = MutableLiveData<CustomView>().apply {
-        customView = CustomView(context)
-        value = customView
+        //customView = CustomView(context)
+        //value = customView
     }
-    val value : LiveData<CustomView> = _view
+    //val value : LiveData<CustomView> = _view
 }

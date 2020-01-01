@@ -71,13 +71,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?){
         if (currentUser != null){
-            if (currentUser.isEmailVerified){
+            //email verification bug
+            /*if (currentUser.isEmailVerified){
                 startActivity(Intent(this,MainPageActivity::class.java))
                 finish()
             }
             else{
                 toast("Please verify your email adress")
-            }
+            }*/
+
+            startActivity(Intent(this,MainPageActivity::class.java))
+            finish()
 
         }
         else{
