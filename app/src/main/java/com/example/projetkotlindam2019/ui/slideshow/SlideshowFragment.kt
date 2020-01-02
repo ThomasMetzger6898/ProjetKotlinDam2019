@@ -16,7 +16,6 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.ParsedRequestListener
 import com.example.projetkotlindam2019.R
 import com.example.projetkotlindam2019.classes.Car
-import com.example.projetkotlindam2019.classes.CarList
 import com.example.projetkotlindam2019.classes.MercedesCardAdapter
 
 import org.json.JSONArray
@@ -55,7 +54,7 @@ class SlideshowFragment : Fragment() {
 
         for (i in 0..jsonarr.length()-1){
             var jsonobj = jsonarr.getJSONObject(i)
-            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")),(jsonobj.getInt("Chevaux")))
+            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), R.drawable.ic_img1)
             array.add(car)
         }
 
