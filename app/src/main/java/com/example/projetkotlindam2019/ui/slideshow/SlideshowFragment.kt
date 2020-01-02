@@ -51,10 +51,11 @@ class SlideshowFragment : Fragment() {
 
         var jsonarr = JSONArray(json)
         val array : ArrayList<Car> = ArrayList<Car>()
+        val imageArray = listOf(R.drawable.ic_img1,R.drawable.ic_image10,R.drawable.ic_image11,R.drawable.ic_image3,R.drawable.ic_image4,R.drawable.ic_image5,R.drawable.ic_image6,R.drawable.ic_image7,R.drawable.ic_image8,R.drawable.ic_image9)
 
         for (i in 0..jsonarr.length()-1){
             var jsonobj = jsonarr.getJSONObject(i)
-            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), R.drawable.ic_img1)
+            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i])
             array.add(car)
         }
 
