@@ -18,12 +18,12 @@ class SlideshowViewModel : ViewModel() {
         return _mercedesList.value;
     }*/
 
-    val _mercedesList = ArrayList<Car>()
+    var _mercedesList: MutableList<Car> = ArrayList<Car>()
 
     fun getList() : ArrayList<Car>{
         _mercedesList.add(Car("Amg","Mercedes", R.drawable.ic_img1))
         _mercedesList.add(Car("Cls","Mercedes", R.drawable.ic_img2))
-        return _mercedesList;
+        return _mercedesList as ArrayList<Car>;
 
     }
 }

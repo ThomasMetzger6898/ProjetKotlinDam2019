@@ -1,10 +1,9 @@
 package com.example.projetkotlindam2019.ui.home
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.projetkotlindam2019.classes.CustomView
 
 class HomeViewModel : ViewModel() {
 
@@ -16,4 +15,5 @@ class HomeViewModel : ViewModel() {
         //value = customView
     }
     //val value : LiveData<CustomView> = _view
+
 }

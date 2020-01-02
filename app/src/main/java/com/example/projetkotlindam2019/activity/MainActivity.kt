@@ -1,15 +1,15 @@
-package com.example.projetkotlindam2019
+package com.example.projetkotlindam2019.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import com.example.projetkotlindam2019.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.tv_password
 import kotlinx.android.synthetic.main.activity_main.tv_username
-import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btn_redirect.setOnClickListener{
-            startActivity(Intent(this,SignUpActivity::class.java))
+            startActivity(Intent(this, SignUpActivity::class.java))
             finish()
         }
 
@@ -80,7 +80,8 @@ class MainActivity : AppCompatActivity() {
                 toast("Please verify your email adress")
             }*/
 
-            startActivity(Intent(this,MainPageActivity::class.java))
+
+            startActivity(Intent(this, MainPageActivity::class.java))
             finish()
 
         }
