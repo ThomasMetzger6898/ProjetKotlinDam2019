@@ -3,7 +3,9 @@ package com.example.projetkotlindam2019.classes
 import android.os.Parcel
 import android.os.Parcelable
 
-class Car ( val nom:String,val marque: String, val image: Int ) : Parcelable {
+
+
+class Car ( val nom:String,val marque: String, val image: Int) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readString(),
@@ -30,3 +32,6 @@ class Car ( val nom:String,val marque: String, val image: Int ) : Parcelable {
         }
     }
 }
+
+
+//class Car ( val nom:String,val marque: String, val image: Int,val consomation:Double,val vitesseMax :Int,val cheveaux:Int,val poid:Int,val zeroAcent:Double,val annee:Int ) : Parcelable

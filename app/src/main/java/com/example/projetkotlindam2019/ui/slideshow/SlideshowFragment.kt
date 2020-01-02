@@ -11,9 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.androidnetworking.AndroidNetworking
-import com.androidnetworking.error.ANError
-import com.androidnetworking.interfaces.ParsedRequestListener
 import com.example.projetkotlindam2019.R
 import com.example.projetkotlindam2019.classes.Car
 import com.example.projetkotlindam2019.classes.MercedesCardAdapter
@@ -55,7 +52,9 @@ class SlideshowFragment : Fragment() {
 
         for (i in 0..jsonarr.length()-1){
             var jsonobj = jsonarr.getJSONObject(i)
+            //val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getDouble("Consomation")),(jsonobj.getInt("Vitesse_maximum")),(jsonobj.getInt("Chevaux")),(jsonobj.getInt("Poids")),(jsonobj.getDouble("0_a_100")),(jsonobj.getInt("Année")))
             val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i])
+
             array.add(car)
         }
 
