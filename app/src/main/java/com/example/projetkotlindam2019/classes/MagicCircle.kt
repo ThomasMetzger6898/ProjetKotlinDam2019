@@ -1,4 +1,4 @@
-package com.example.projetkotlindam2019.ui.home
+package com.example.projetkotlindam2019.classes
 
 import kotlin.random.Random
 

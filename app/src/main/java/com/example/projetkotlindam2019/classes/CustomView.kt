@@ -1,4 +1,6 @@
-package com.example.projetkotlindam2019.ui.home
+package com.example.projetkotlindam2019.classes
+
+
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,14 +11,13 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import java.util.*
 import kotlin.collections.ArrayList
 
 class CustomView : View,View.OnTouchListener{
 
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-        var mCircletest : MagicCircle = MagicCircle(width , height)
+        var mCircletest : MagicCircle = MagicCircle(width, height)
         if (event?.action == MotionEvent.ACTION_UP) {
             Log.d("TOUCH", "on rentre dans ontouch" + array.size)
             // mCircle = MagicCircle(width , height)
@@ -45,11 +46,12 @@ class CustomView : View,View.OnTouchListener{
     lateinit var mCircle2 : MagicCircle
     // lateinit var mCircle3: MagicCircle
     var array = ArrayList<MagicCircle>()
+    var colorArray = listOf(Color.BLUE,Color.BLACK,Color.YELLOW,Color.CYAN,Color.GREEN,Color.MAGENTA,Color.RED)
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bot: Int) {
         super.onLayout(changed, left, top, right, bot)
-        mCircle = MagicCircle(width , height)
-        mCircle2 = MagicCircle(width-20 , height-20)
+        mCircle = MagicCircle(width, height)
+        mCircle2 = MagicCircle(width - 20, height - 20)
         //   mCircle3 = MagicCircle(width+20 , height+20)
 
         array.add(mCircle)
@@ -64,7 +66,8 @@ class CustomView : View,View.OnTouchListener{
 
     private fun init() {
         super.setOnTouchListener(this)
-        mPaint.color = Color.BLUE
+
+        //mPaint.color = Color.BLUE
     }
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
@@ -73,14 +76,14 @@ class CustomView : View,View.OnTouchListener{
         for (i in 0..(array.size-1)){
 
             array.get(i).move()
-
+            var color = colorArray.random()
+            mPaint.color = color
             canvas?.drawCircle( array.get(i).spawnX, array.get(i).spawnY, array.get(i).rad,mPaint)
             invalidate()
 
             Handler().postDelayed({
-                mPaint.color = Color.rgb((0..255).random(),(0..255).random(),(0..255).random())
                 canvas?.drawCircle( array.get(i).spawnX, array.get(i).spawnY, array.get(i).rad ,mPaint)
-            }, 5000)
+            }, 1000000)
         }
 
     }

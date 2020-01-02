@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity() {
                 toast("Please verify your email adress")
             }*/
 
+
             startActivity(Intent(this, MainPageActivity::class.java))
             finish()
 
