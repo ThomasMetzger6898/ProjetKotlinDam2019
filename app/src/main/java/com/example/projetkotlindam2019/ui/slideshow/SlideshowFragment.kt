@@ -14,8 +14,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetkotlindam2019.R
+import com.example.projetkotlindam2019.activity.AddCarActivity
 import com.example.projetkotlindam2019.classes.Car
 import com.example.projetkotlindam2019.classes.MercedesCardAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 import org.json.JSONArray
 import java.io.InputStream
@@ -71,6 +73,14 @@ class SlideshowFragment : Fragment() {
         adapter = MercedesCardAdapter(array)
         rvMercedes.layoutManager = LinearLayoutManager(mView.context)
         rvMercedes.adapter = adapter
+
+        val fab: FloatingActionButton = mView.findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            val intent = Intent(mView.context,AddCarActivity::class.java)
+            intent.putParcelableArrayListExtra("list",array )
+            startActivity(intent)
+
+        }
 
         return mView
 

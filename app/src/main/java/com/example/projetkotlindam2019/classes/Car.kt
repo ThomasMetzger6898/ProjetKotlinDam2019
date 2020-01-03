@@ -2,7 +2,9 @@ package com.example.projetkotlindam2019.classes
 
 import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.serialization.Serializable
 
+@Serializable
 class Car ( val nom:String,val marque: String, val image: Int,val annee:String, val conso:String,val vitesse_maximum:String,val cv:String,val poid:String,val zeroAcent:String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
