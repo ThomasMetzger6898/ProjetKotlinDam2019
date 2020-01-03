@@ -1,6 +1,7 @@
 package com.example.projetkotlindam2019.ui.gallery
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,9 @@ import android.widget.ArrayAdapter
 
 
 class GalleryFragment : Fragment() {
-
+    var array : ArrayList<Car> = ArrayList<Car>()
+    var voiture1 : Int = 0
+    var voiture2 : Int = 0
     private lateinit var galleryViewModel: GalleryViewModel
 
     override fun onCreateView(
@@ -45,7 +48,7 @@ class GalleryFragment : Fragment() {
         json = inputStream.bufferedReader().use { it.readText()}
 
         var jsonarr = JSONArray(json)
-        val array : ArrayList<Car> = ArrayList<Car>()
+
         val imageArray = listOf(R.drawable.ic_img1,R.drawable.ic_image10,R.drawable.ic_image11,R.drawable.ic_image3,R.drawable.ic_image4,R.drawable.ic_image5,R.drawable.ic_image6,R.drawable.ic_image7,R.drawable.ic_image8,R.drawable.ic_image9)
 
         for (i in 0..jsonarr.length()-1){
@@ -69,8 +72,13 @@ class GalleryFragment : Fragment() {
             override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
                 // Display the selected item text on text view
              //   text_view.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                voiture1 = position
                 nomv1.text = array[position].nom
-                cv1.text = array[position].nom
+                cv1.text = array[position].cv
+                vm1.text = array[position].vitesse_maximum
+                p1.text = array[position].poid
+                zero1.text = array[position].zeroAcent
+                compare ()
             }
             override fun onNothingSelected(parent: AdapterView<*>){
                 // Another interface callback
@@ -81,14 +89,71 @@ class GalleryFragment : Fragment() {
             override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
                 // Display the selected item text on text view
                 //   text_view.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                voiture2 = position
                 nomv2.text = array[position].nom
-                cv2.text = array[position].nom
+                cv2.text = array[position].cv
+                vm2.text = array[position].vitesse_maximum
+                p2.text = array[position].poid
+                zero2.text = array[position].zeroAcent
+                 compare()
             }
             override fun onNothingSelected(parent: AdapterView<*>){
                 // Another interface callback
             }
         }
 
+
+
             return root
     }
+    fun compare () {
+
+        if (array[voiture1].cv.toFloat() > array[voiture2].cv.toFloat()) {
+            cv1.setTextColor(Color.rgb(0,128,0)) // vert
+            cv2.setTextColor(Color.rgb(255,0,0)) //rouge
+        } else if (array[voiture1].cv.toFloat() < array[voiture2].cv.toFloat()) {
+            cv1.setTextColor(Color.rgb(255,0,0))
+            cv2.setTextColor(Color.rgb(0,128,0))
+        } else if (array[voiture1].cv.toFloat() == array[voiture2].cv.toFloat()) {
+            cv1.setTextColor(Color.rgb(0,0,0))
+            cv2.setTextColor(Color.rgb(0,0,0))
+        }
+
+        if (array[voiture1].vitesse_maximum.toFloat() > array[voiture2].vitesse_maximum.toFloat()) {
+            vm1.setTextColor(Color.rgb(0,128,0)) // vert
+            vm2.setTextColor(Color.rgb(255,0,0)) //rouge
+        } else if (array[voiture1].vitesse_maximum.toFloat() < array[voiture2].vitesse_maximum.toFloat()) {
+            vm1.setTextColor(Color.rgb(255,0,0))
+            vm2.setTextColor(Color.rgb(0,128,0))
+        } else if (array[voiture1].vitesse_maximum.toFloat() == array[voiture2].vitesse_maximum.toFloat()) {
+            vm1.setTextColor(Color.rgb(0,0,0))
+            vm2.setTextColor(Color.rgb(0,0,0))
+        }
+
+        if (array[voiture1].poid.toFloat() < array[voiture2].poid.toFloat()) {
+            p1.setTextColor(Color.rgb(0,128,0)) // vert
+            p2.setTextColor(Color.rgb(255,0,0)) //rouge
+        } else if (array[voiture1].poid.toFloat() > array[voiture2].poid.toFloat()) {
+            p1.setTextColor(Color.rgb(255,0,0))
+            p2.setTextColor(Color.rgb(0,128,0))
+        } else if (array[voiture1].poid.toFloat() == array[voiture2].poid.toFloat()) {
+            p1.setTextColor(Color.rgb(0,0,0))
+            p2.setTextColor(Color.rgb(0,0,0))
+        }
+
+        if (array[voiture1].zeroAcent.toFloat() < array[voiture2].zeroAcent.toFloat()) {
+            zero1.setTextColor(Color.rgb(0,128,0)) // vert
+            vm2.setTextColor(Color.rgb(255,0,0)) //rouge
+        } else if (array[voiture1].zeroAcent.toFloat() > array[voiture2].zeroAcent.toFloat()) {
+            zero1.setTextColor(Color.rgb(255,0,0))
+            zero2.setTextColor(Color.rgb(0,128,0))
+        } else if (array[voiture1].zeroAcent.toFloat() == array[voiture2].zeroAcent.toFloat()) {
+            zero1.setTextColor(Color.rgb(0,0,0))
+            zero2.setTextColor(Color.rgb(0,0,0))
+        }
+
+
+
+    }
+
 }
