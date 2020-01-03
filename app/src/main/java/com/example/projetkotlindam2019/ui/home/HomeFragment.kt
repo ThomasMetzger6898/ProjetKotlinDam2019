@@ -28,6 +28,8 @@ class HomeFragment : Fragment() {
             customView.array = it.array
         })*/
 
+
+
         return root
     }
 }
