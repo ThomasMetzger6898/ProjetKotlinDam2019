@@ -206,13 +206,15 @@
             android:id="@+id/btn_last"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="last" />
+            android:text="last"
+            android:drawableLeft="@drawable/ic_arrow_back_last"/>
 
         <Button
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next" />
+            android:text="Next"
+            android:drawableRight="@drawable/ic_arrow_forward"/>
 
     </LinearLayout>
 

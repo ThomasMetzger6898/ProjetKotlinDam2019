@@ -1,6 +1,8 @@
 package com.example.projetkotlindam2019.ui.slideshow
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +27,7 @@ class SlideshowFragment : Fragment() {
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<MercedesCardAdapter.ViewHolder>? = null
     private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var array : ArrayList<Car>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,7 +37,6 @@ class SlideshowFragment : Fragment() {
 
         mView = inflater.inflate(R.layout.fragment_slideshow, container, false)
         val rvMercedes = mView.findViewById(R.id.my_recycler_view) as RecyclerView
-
 
         slideshowViewModel =
             ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
@@ -47,24 +49,28 @@ class SlideshowFragment : Fragment() {
         json = inputStream.bufferedReader().use { it.readText()}
 
         var jsonarr = JSONArray(json)
-        val array : ArrayList<Car> = ArrayList<Car>()
+        //val array : ArrayList<Car> = ArrayList<Car>()
+        array = ArrayList<Car>()
         val imageArray = listOf(R.drawable.ic_img1,R.drawable.ic_image10,R.drawable.ic_image11,R.drawable.ic_image3,R.drawable.ic_image4,R.drawable.ic_image5,R.drawable.ic_image6,R.drawable.ic_image7,R.drawable.ic_image8,R.drawable.ic_image9)
 
         for (i in 0..jsonarr.length()-1){
             var jsonobj = jsonarr.getJSONObject(i)
             //val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getString("Consomation")),(jsonobj.getInt("Vitesse_maximum")),(jsonobj.getInt("Chevaux")),(jsonobj.getInt("Poids")),(jsonobj.getString("0_a_100")),(jsonobj.getInt("Année")))
-            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getInt("Année")),(jsonobj.getString("Consomation")),(jsonobj.getInt("Vitesse_maximum")),(jsonobj.getInt("Chevaux")),(jsonobj.getInt("Poids")),(jsonobj.getString("0_a_100")))
+            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getString("Année")),(jsonobj.getString("Consomation")),(jsonobj.getString("Vitesse_maximum")),(jsonobj.getString("Chevaux")),(jsonobj.getString("Poids")),(jsonobj.getString("0_a_100")))
 
             array.add(car)
         }
 
+        if(arguments != null){
+            val myCar : Car = arguments!!.getParcelable("car")
+            //Log.d("",myCar)
+            array.add(myCar)
+        }
+
+
         adapter = MercedesCardAdapter(array)
         rvMercedes.layoutManager = LinearLayoutManager(mView.context)
         rvMercedes.adapter = adapter
-
-
-
-
 
         return mView
 
@@ -75,5 +81,9 @@ class SlideshowFragment : Fragment() {
             textView.text = it
         })
         return root*/
+    }
+
+    fun addItem(car : Car){
+        array.add(car)
     }
 }

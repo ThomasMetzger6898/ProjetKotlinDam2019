@@ -3,29 +3,28 @@ package com.example.projetkotlindam2019.classes
 import android.os.Parcel
 import android.os.Parcelable
 
-class Car ( val nom:String,val marque: String, val image: Int,val annee:Int, val conso:String,val vitesse_maximum:Int,val cv:Int,val poid:Int,val zeroAcent:String) : Parcelable {
+class Car ( val nom:String,val marque: String, val image: Int,val annee:String, val conso:String,val vitesse_maximum:String,val cv:String,val poid:String,val zeroAcent:String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readInt(),
-        parcel.readInt(),
         parcel.readString(),
-        parcel.readInt(),
-        parcel.readInt(),
-        parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(nom)
         parcel.writeString(marque)
         parcel.writeInt(image)
-        parcel.writeInt(annee)
+        parcel.writeString(annee)
         parcel.writeString(conso)
-        parcel.writeInt(vitesse_maximum)
-        parcel.writeInt(cv)
-        parcel.writeInt(poid)
+        parcel.writeString(vitesse_maximum)
+        parcel.writeString(cv)
+        parcel.writeString(poid)
         parcel.writeString(zeroAcent)
     }
 

@@ -1,5 +1,6 @@
 package com.example.projetkotlindam2019.ui.gallery
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.projetkotlindam2019.R
+import com.example.projetkotlindam2019.activity.AddCarActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class GalleryFragment : Fragment() {
 
@@ -27,6 +30,9 @@ class GalleryFragment : Fragment() {
         galleryViewModel.text.observe(this, Observer {
             text.text = it
         })
+
+        /*val fab: FloatingActionButton = root.findViewById(R.id.fab)
+        fab.hide()*/
 
         return root
     }
