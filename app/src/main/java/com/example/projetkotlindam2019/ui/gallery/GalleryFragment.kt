@@ -143,7 +143,7 @@ class GalleryFragment : Fragment() {
 
         if (array[voiture1].zeroAcent.toFloat() < array[voiture2].zeroAcent.toFloat()) {
             zero1.setTextColor(Color.rgb(0,128,0)) // vert
-            vm2.setTextColor(Color.rgb(255,0,0)) //rouge
+            zero2.setTextColor(Color.rgb(255,0,0)) //rouge
         } else if (array[voiture1].zeroAcent.toFloat() > array[voiture2].zeroAcent.toFloat()) {
             zero1.setTextColor(Color.rgb(255,0,0))
             zero2.setTextColor(Color.rgb(0,128,0))
