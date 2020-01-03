@@ -30,6 +30,10 @@ class Car ( val nom:String,val marque: String, val image: Int,val annee:String, 
         parcel.writeString(zeroAcent)
     }
 
+    override fun toString(): String {
+        return nom
+    }
+
     override fun describeContents(): Int {
         return 0
     }
