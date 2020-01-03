@@ -46,14 +46,12 @@ class GalleryFragment : Fragment() {
 
         var jsonarr = JSONArray(json)
         val array : ArrayList<Car> = ArrayList<Car>()
-        val arrayofName : ArrayList<String> = ArrayList<String>()
         val imageArray = listOf(R.drawable.ic_img1,R.drawable.ic_image10,R.drawable.ic_image11,R.drawable.ic_image3,R.drawable.ic_image4,R.drawable.ic_image5,R.drawable.ic_image6,R.drawable.ic_image7,R.drawable.ic_image8,R.drawable.ic_image9)
 
         for (i in 0..jsonarr.length()-1){
             var jsonobj = jsonarr.getJSONObject(i)
             //val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getDouble("Consomation")),(jsonobj.getInt("Vitesse_maximum")),(jsonobj.getInt("Chevaux")),(jsonobj.getInt("Poids")),(jsonobj.getDouble("0_a_100")),(jsonobj.getInt("Année")))
-            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i])
-            arrayofName.add((jsonobj.getString("Nom")))
+            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getString("Année")),(jsonobj.getString("Consomation")),(jsonobj.getString("Vitesse_maximum")),(jsonobj.getString("Chevaux")),(jsonobj.getString("Poids")),(jsonobj.getString("0_a_100")))
             array.add(car)
         }
         /*Find the id of spinner*/
