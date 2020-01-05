@@ -27,17 +27,31 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 3)Brancher un téléphone ou télécharger un émulateur
 4)Lancer l'application
 ```
+#### Auteur du projet
+- Thomas METZGER & Clement CIPRE 
+#### Auteur du README
+- Jeremy BLAZIRE & Jennifer LOBATO CALDAS
 
+#### Layout connexion
 ![Screenshot](assetReadme/Capture.PNG)
 
+#### Layout créer un compte
 ![Screenshot](assetReadme/Capture1.PNG)
 
+#### Layout comparateur de voiture
+![Screenshot](assetReadme/Capture2.PNG)
+
+#### Layout course de boules
 ![Screenshot](assetReadme/Capture3.PNG)
 
+#### Layout menu de navigation
 ![Screenshot](assetReadme/Capture4.PNG)
 
+#### Layout ajouter une voiture
 ![Screenshot](assetReadme/Capture5.PNG)
 
+#### Layout liste de voiture
 ![Screenshot](assetReadme/Capture6.PNG)
 
+ #### Layout detail de la voiture
 ![Screenshot](assetReadme/Capture7.PNG)
