@@ -40,9 +40,9 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 3)Brancher un téléphone ou télécharger un émulateur
 4)Lancer l'application
 ```
+### 🏠 [Capture D'écran](https://github.com/kefranabg/readme-md-generator#readme)
 
 #### Layout connexion
-### 🏠 [Connexion](https://github.com/kefranabg/readme-md-generator#readme)
 ![Screenshot](assetReadme/Capture.PNG)
 - Cette page permet de se connecter à l'application lorsque l'utilisateur à déjà un compte ou vient d'en créer un
 
