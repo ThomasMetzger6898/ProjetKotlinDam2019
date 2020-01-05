@@ -1,6 +1,9 @@
 # Kotlin Car Gallery
 Bienvenue dans KotlinCarGallery
 
+![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
+
+
 ## Présentation du projet
 - Une application qui permet de voir les différentes choses vues en cours de programmation Android
 - Une application qui permet d'approfondir les notions acquises pendant les cours de programmation Android
