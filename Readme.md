@@ -6,7 +6,7 @@
   </a> 
 </p>
 
-<span align="center"
+<span align="center">
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
 </span>
 
