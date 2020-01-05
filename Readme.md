@@ -1,65 +1,72 @@
-# Kotlin Car Gallery
-Bienvenue dans KotlinCarGallery
+<h1 align="center">Welcome to (KotlinCarGallery)  👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D9.3.0-blue.svg" />
+  <a href="https://github.com/kefranabg/readme-md-generator#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/kefranabg/(BowlingScoreBoard) " />
+  </a>
+</p>
 
-![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
+> L'application permet d'enregistrer ses scores au bowling et ainsi de visualiser ses stats 
 
+### 🏠 [Homepage](https://github.com/kefranabg/readme-md-generator#readme)
 
-## Présentation du projet
-- Une application qui permet de voir les différentes choses vues en cours de programmation Android
-- Une application qui permet d'approfondir les notions acquises pendant les cours de programmation Android
-- Une application qui permet de gérer, ajouter, supprimer sa collection de voiture ainsi que de comparer les voitures de sa collection 
+### ✨ [Demo]( https://youtu.be/3jyd_go2pzY)
 
-#### Technologies utilisées
-- Android Studio, Téléphone Android, Firebase
+## Prerequisites
 
-#### A installer
-- Git
-- Android Studio
+- npm >=5.5.0
+- node >=9.3.0
 
-#### Télécharger le projet
-- [Github](https://github.com/ThomasMetzger6898/ProjetKotlinDam2019)
+## Install
 
-#### Lancement du projet
-nécessite [androidStudio](https://developer.android.com/studio/)
 ```sh
-1)Lancer androidStudio
-2)Ouvrir le projet
-3)Brancher un téléphone ou télécharger un émulateur
-4)Lancer l'application
+npm install
 ```
-#### Auteur du projet
-- Thomas METZGER & Clement CIPRE 
-#### Auteur du README
-- Jeremy BLAZIRE & Jennifer LOBATO CALDAS
 
-#### Layout connexion
-![Screenshot](assetReadme/Capture.PNG)
-- Cette page permet de se connecter à l'application lorsque l'utilisateur à déjà un compte ou vient d'en créer un
+## Usage
 
-#### Layout créer un compte
-![Screenshot](assetReadme/Capture1.PNG)
-- Cette page permet de créer un compte lorsque l'utilisateur n'en a pas
+```sh
+npm run start
+```
 
-#### Layout comparateur de voiture
-![Screenshot](assetReadme/Capture2.PNG)
-- Cette page permet de selectionner deux voitures présentes dans la liste de voiture et de comparer leurs caractéristiques
+## Run tests
 
-#### Layout course de boules
-![Screenshot](assetReadme/Capture3.PNG)
-- Cette page permet de créer autant de boules que l'on souhaite
+```sh
+npm run test
+```
 
-#### Layout menu de navigation
-![Screenshot](assetReadme/Capture4.PNG)
-- Cette navigation permet de naviger dans les pages de l'applications
+## Author
 
-#### Layout ajouter une voiture
-![Screenshot](assetReadme/Capture5.PNG)
-- Cette page est lancée lorsque l'on appuie sur le float button en bas de la page Liste de voiture et permet de remplir les caractéristiques d'une nouvelles voitures
+👤 **Jeremy Bazire **
 
-#### Layout liste de voiture
-![Screenshot](assetReadme/Capture6.PNG)
-- Cette page permet de voir la liste de voiture de l'utilisateur.
+👤 **Jennifer Lobato Caldas **
 
- #### Layout detail de la voiture
-![Screenshot](assetReadme/Capture7.PNG)
-- Cette page est lancée lorsque l'on clic sur un élément de la liste de voiture, on y retrouve les détails de la voiture sélectionné et l'on peut directement passer à la voiture suivante ou précédante de la liste.
+## Readme author 
+👤 **Thomas Metzger **
+
+👤 **Clement Cipre **
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/kefranabg/readme-md-generator/issues). You can also take a look at the [contributing guide](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2020 [Jeremy Bazire ](https://github.com/kefranabg).<br />
+This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
