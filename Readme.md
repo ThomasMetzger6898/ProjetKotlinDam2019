@@ -15,7 +15,9 @@
 - Une application qui permet de gérer, ajouter, supprimer sa collection de voiture ainsi que de comparer les voitures de sa collection 
 
 #### Technologies utilisées
-- Android Studio, Téléphone Android, Firebase
+- Android Studio
+- Téléphone Android
+- Firebase
 
 #### A installer
 - Git
