@@ -27,3 +27,17 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 3)Brancher un téléphone ou télécharger un émulateur
 4)Lancer l'application
 ```
+
+![Screenshot](assetReadme/capture.PNG)
+
+![Screenshot](assetReadme/capture1.PNG)
+
+![Screenshot](assetReadme/capture3.PNG)
+
+![Screenshot](assetReadme/capture4.PNG)
+
+![Screenshot](assetReadme/capture5.PNG)
+
+![Screenshot](assetReadme/capture6.PNG)
+
+![Screenshot](assetReadme/capture7.PNG)
