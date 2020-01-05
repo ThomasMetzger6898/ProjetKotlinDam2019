@@ -6,9 +6,9 @@
   </a> 
 </p>
 
-<span align="center">
+<div align="center">
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
-</span>
+</div>
 
 ## Présentation du projet
 - Une application qui permet de voir les différentes choses vues en cours de programmation Android
@@ -70,18 +70,18 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 - Cette page est lancée lorsque l'on clic sur un élément de la liste de voiture, on y retrouve les détails de la voiture sélectionné et l'on peut directement passer à la voiture suivante ou précédante de la liste.
 
 
-## Author
+## Auteurs
 👤**Thomas Metzger**
 
 👤**Clement Cipre**
 
-## Readme author 
+## Readme auteurs 
 👤**Jeremy Bazire**
 
 👤**Jennifer Lobato Caldas**
 
 
-## Show your support
+## Montrez votre soutient
 
 Donnez une ⭐️ si ce projet vous a aidé!
 
@@ -91,4 +91,4 @@ Copyright © 2020 <br />
 Ce projet est sous licence [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) 
 
 ***
-_Ce README A été généré avec❤️ 
+_ Ce README A été généré avec❤️ 
