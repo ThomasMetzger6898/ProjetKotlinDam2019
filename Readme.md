@@ -6,8 +6,9 @@
   </a> 
 </p>
 
+<span align="center"
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
-
+</span>
 
 ## Présentation du projet
 - Une application qui permet de voir les différentes choses vues en cours de programmation Android
