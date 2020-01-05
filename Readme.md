@@ -3,11 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/kefranabg/readme-md-generator#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  
+  </a> 
 </p>
 
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
@@ -36,7 +32,7 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 3)Brancher un téléphone ou télécharger un émulateur
 4)Lancer l'application
 ```
-### 🏠 [Capture D'écran](https://github.com/kefranabg/readme-md-generator#readme)
+### 🏠 [Capture D'écran]
 
 #### Layout connexion
 ![Screenshot](assetReadme/Capture.PNG)
