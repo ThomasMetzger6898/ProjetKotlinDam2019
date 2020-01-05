@@ -6,9 +6,7 @@
   </a> 
 </p>
 
-<div align="center">
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
-</div>
 
 ## Présentation du projet
 - Une application qui permet de voir les différentes choses vues en cours de programmation Android
@@ -91,4 +89,4 @@ Copyright © 2020 <br />
 Ce projet est sous licence [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) 
 
 ***
-_ Ce README A été généré avec❤️ 
+_Ce README A été généré avec❤️ 
