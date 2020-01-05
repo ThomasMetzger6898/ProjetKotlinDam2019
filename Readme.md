@@ -14,10 +14,6 @@
   </a>
 </p>
 
-> L'application permet d'enregistrer ses scores au bowling et ainsi de visualiser ses stats 
-
-### 🏠 [Homepage](https://github.com/kefranabg/readme-md-generator#readme)
-
 ![Screenshot](assetReadme/ic_launcher_authentification_logo.png)
 
 
@@ -45,26 +41,39 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 4)Lancer l'application
 ```
 
-## Prerequisites
-- npm >=5.5.0
-- node >=9.3.0
+#### Layout connexion
+### 🏠 [Connexion](https://github.com/kefranabg/readme-md-generator#readme)
+![Screenshot](assetReadme/Capture.PNG)
+- Cette page permet de se connecter à l'application lorsque l'utilisateur à déjà un compte ou vient d'en créer un
 
-## Install
-```sh
-npm install
-```
+#### Layout créer un compte
+![Screenshot](assetReadme/Capture1.PNG)
+- Cette page permet de créer un compte lorsque l'utilisateur n'en a pas
 
-## Usage
+#### Layout comparateur de voiture
+![Screenshot](assetReadme/Capture2.PNG)
+- Cette page permet de selectionner deux voitures présentes dans la liste de voiture et de comparer leurs caractéristiques
 
-```sh
-npm run start
-```
+#### Layout course de boules
+![Screenshot](assetReadme/Capture3.PNG)
+- Cette page permet de créer autant de boules que l'on souhaite
 
-## Run tests
+#### Layout menu de navigation
+![Screenshot](assetReadme/Capture4.PNG)
+- Cette navigation permet de naviger dans les pages de l'applications
 
-```sh
-npm run test
-```
+#### Layout ajouter une voiture
+![Screenshot](assetReadme/Capture5.PNG)
+- Cette page est lancée lorsque l'on appuie sur le float button en bas de la page Liste de voiture et permet de remplir les caractéristiques d'une nouvelles voitures
+
+#### Layout liste de voiture
+![Screenshot](assetReadme/Capture6.PNG)
+- Cette page permet de voir la liste de voiture de l'utilisateur.
+
+ #### Layout detail de la voiture
+![Screenshot](assetReadme/Capture7.PNG)
+- Cette page est lancée lorsque l'on clic sur un élément de la liste de voiture, on y retrouve les détails de la voiture sélectionné et l'on peut directement passer à la voiture suivante ou précédante de la liste.
+
 
 ## Author
 👤 **Thomas Metzger **
