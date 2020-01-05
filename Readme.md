@@ -28,16 +28,16 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 4)Lancer l'application
 ```
 
-![Screenshot](assetReadme/Capture.png)
+![Screenshot](assetReadme/Capture.PNG)
 
 ![Screenshot](assetReadme/Capture1.PNG)
 
-![Screenshot](assetReadme/capture3.PNG)
+![Screenshot](assetReadme/Capture3.PNG)
 
-![Screenshot](assetReadme/capture4.PNG)
+![Screenshot](assetReadme/Capture4.PNG)
 
-![Screenshot](assetReadme/capture5.PNG)
+![Screenshot](assetReadme/Capture5.PNG)
 
-![Screenshot](assetReadme/capture6.PNG)
+![Screenshot](assetReadme/Capture6.PNG)
 
-![Screenshot](assetReadme/capture7.PNG)
+![Screenshot](assetReadme/Capture7.PNG)
