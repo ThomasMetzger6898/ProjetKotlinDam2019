@@ -1,7 +1,6 @@
 package com.example.projetkotlindam2019.activity
 
 import android.os.Bundle
-import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetkotlindam2019.R
 

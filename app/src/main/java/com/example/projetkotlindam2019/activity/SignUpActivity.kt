@@ -25,40 +25,40 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun signUpUser(){
-            if(tv_username.text.toString().isEmpty()){
-                tv_username.error = "please enter email!"
-                tv_username.requestFocus()
-                return
-            }
-            if(!Patterns.EMAIL_ADDRESS.matcher(tv_username.text.toString()).matches()){
-                tv_username.error = "please enter a valid email!"
-                tv_username.requestFocus()
-                return
-            }
-            if(tv_password.text.toString().isEmpty()){
-                tv_username.error = "please enter password!"
-                tv_username.requestFocus()
-                return
-            }
+    private fun signUpUser() {
+        if (tv_username.text.toString().isEmpty()) {
+            tv_username.error = "please enter email!"
+            tv_username.requestFocus()
+            return
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(tv_username.text.toString()).matches()) {
+            tv_username.error = "please enter a valid email!"
+            tv_username.requestFocus()
+            return
+        }
+        if (tv_password.text.toString().isEmpty()) {
+            tv_username.error = "please enter password!"
+            tv_username.requestFocus()
+            return
+        }
 
         auth.createUserWithEmailAndPassword(tv_username.text.toString(), tv_password.text.toString())
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val user = auth.currentUser
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val user = auth.currentUser
 
-                    user?.sendEmailVerification()
-                        ?.addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                startActivity(Intent(this, MainActivity::class.java))
-                                finish()
-                            }
-                        }
+                        user?.sendEmailVerification()
+                                ?.addOnCompleteListener { task ->
+                                    if (task.isSuccessful) {
+                                        startActivity(Intent(this, MainActivity::class.java))
+                                        finish()
+                                    }
+                                }
 
-                } else {
-                    toast("Sign Up failed. Try again after some time")
+                    } else {
+                        toast("Sign Up failed. Try again after some time")
+                    }
                 }
-            }
     }
 
 }

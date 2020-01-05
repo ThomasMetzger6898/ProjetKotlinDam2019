@@ -8,13 +8,6 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetkotlindam2019.R
 import com.example.projetkotlindam2019.classes.Car
-import com.example.projetkotlindam2019.ui.home.HomeFragment
-import com.example.projetkotlindam2019.ui.slideshow.SlideshowFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.list
-import org.json.JSONObject
-import java.io.InputStream
 
 
 class AddCarActivity : AppCompatActivity() {
@@ -62,34 +55,11 @@ class AddCarActivity : AppCompatActivity() {
 
             val btnAjoute: Button = findViewById(R.id.btn_ajouter)
             btnAjoute.setOnClickListener {
-                /*val intent = Intent(this,SlideshowFragment::class.java)
-            intent.putExtra("car",myCar )
-            startActivity(intent)*/
 
 
-                /*val fragobj = SlideshowFragment()
-                val bundle = Bundle()
-                bundle.putParcelable("car", myCar)
-                fragobj.arguments = bundle
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.nav_host_fragment, fragobj)
-                transaction.commit()*/
+                startActivity(Intent(this, MainPageActivity::class.java))
+                finish()
 
-
-
-                var json: String? = null
-
-
-                val inputStream: InputStream = this.assets.open("bdd_json.json")
-                json = inputStream.bufferedReader().use { it.readText() }
-
-                var carListSerialised = Json.stringify(Car.serializer().list,list)
-                val obj = JSONObject()
-                var jsonObject = JSONObject(obj.get("bdd_json.json").toString())
-                jsonObject.remove("bdd_json.json")
-                jsonObject.put("bdd_json.json",carListSerialised)
-
-                startActivity(Intent(this,HomeFragment::class.java))
 
             }
 

@@ -6,4 +6,8 @@
     <color name="backgroundColor">#4E4D4D</color>
     <color name="colorbutton">#3838E2</color>
     <color name="textColor">#F9F9F9</color>
+    <color name="logColorPage">#9DC6FC</color>
+    <color name="cardColor">#81C784</color>
 </resources>
+
+

@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
-    >
-
+    android:background="@color/logColorPage">
 
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        >
+        android:orientation="vertical"
+        android:padding="@dimen/ll_padding">
 
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/iv_width"
+            android:layout_height="@dimen/iv_height"
             android:layout_gravity="center"
             app:srcCompat="@drawable/ic_launcher_authentification_logo" />
 
@@ -43,9 +39,9 @@
             android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Connexion"
-            android:textColor="@color/textColor"
-            android:background="@color/colorbutton"/>
+            android:background="@color/colorbutton"
+            android:text="@string/btn_connexion"
+            android:textColor="@color/textColor" />
 
 
     </LinearLayout>
@@ -54,11 +50,10 @@
         android:id="@+id/btn_redirect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorbutton"
-        android:text="Don't have account"
-        android:textColor="@color/textColor"
         android:layout_alignParentBottom="true"
-        />
+        android:background="@color/colorbutton"
+        android:text="@string/btn_noAccount"
+        android:textColor="@color/textColor" />
 
 
 </RelativeLayout>

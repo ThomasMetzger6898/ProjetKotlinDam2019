@@ -1,52 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <TextView
-        android:text="Choisissez les voitures a comparer"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:textSize="15dp"></TextView>
+        android:text="@string/tv_comparateur_select"
+        android:textSize="@dimen/fr_text_size"></TextView>
 
 
     <Spinner
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="10dp"
 
         android:id="@+id/spinner1"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginStart="@dimen/margin_spinner"
+        android:layout_marginTop="@dimen/margin_spinner"
+
+        android:layout_marginEnd="@dimen/margin_spinner"
+
+        android:textAlignment="center"
+        android:textSize="@dimen/tv_size_spinner" />
 
     <Spinner
 
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-
-
-
-        android:textAlignment="center"
-        android:textSize="10dp"
-
         android:id="@+id/spinner2"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+
+
+        android:layout_marginStart="@dimen/margin_spinner"
+        android:layout_marginTop="@dimen/margin_spinner"
+
+        android:layout_marginEnd="@dimen/margin_spinner"
+
+        android:textAlignment="center"
+        android:textSize="@dimen/tv_size_spinner" />
 
     <LinearLayout
 
@@ -60,30 +53,31 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:text="Voiture"
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_voiture"
+                android:textSize="@dimen/fr_text_size"></TextView>
+
+            <TextView
+                android:id="@+id/nomv1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
+
+            <TextView
+                android:id="@+id/nomv2"
 
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="15dp"></TextView>
-
-        <TextView
-            android:text="iiiiiiiiiiiiii"
-            android:id="@+id/nomv1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="15dp"></TextView>
-
-        <TextView
-            android:text="vvvvvvvvvvvvvvvv"
-
-            android:id="@+id/nomv2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="15dp"></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
         </LinearLayout>
 
         <LinearLayout
@@ -91,29 +85,30 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
-                android:text="Chevaux"
 
+            <TextView
                 android:layout_width="fill_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="15dp"></TextView>
+                android:text="Chevaux"
+                android:textSize="@dimen/fr_text_size"></TextView>
+
             <TextView
-                android:text="iiiiiiiiiiiiii"
                 android:id="@+id/cv1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"
-                ></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="dddddddddd"
                 android:id="@+id/cv2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
         </LinearLayout>
 
@@ -124,29 +119,28 @@
             android:orientation="horizontal">
 
             <TextView
-                android:text="Vitesse Maximum"
-
                 android:layout_width="fill_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="15dp"></TextView>
+                android:text="@string/tv_vm"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="iiiiiiiiiiiiii"
                 android:id="@+id/vm1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"
-                ></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="dddddddddd"
                 android:id="@+id/vm2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
         </LinearLayout>
 
@@ -157,29 +151,28 @@
             android:orientation="horizontal">
 
             <TextView
-                android:text="Poids"
-
                 android:layout_width="fill_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="15dp"></TextView>
+                android:text="@string/tv_poid"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="iiiiiiiiiiiiii"
                 android:id="@+id/p1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"
-                ></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="dddddddddd"
                 android:id="@+id/p2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
         </LinearLayout>
 
@@ -188,40 +181,35 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
-                android:text="Zero a cent"
 
+            <TextView
                 android:layout_width="fill_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="15dp"></TextView>
-
+                android:text="@string/tv_zeroACent"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
 
             <TextView
-                android:text="iiiiiiiiiiiiii"
                 android:id="@+id/zero1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"
-                ></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
             <TextView
-                android:text="dddddddddd"
                 android:id="@+id/zero2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="10dp"></TextView>
+                android:text="@string/tv_nomvl"
+                android:textSize="@dimen/fr_text_size"></TextView>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 
 </LinearLayout>

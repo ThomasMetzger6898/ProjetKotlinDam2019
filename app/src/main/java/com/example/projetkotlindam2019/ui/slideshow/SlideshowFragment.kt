@@ -2,14 +2,10 @@ package com.example.projetkotlindam2019.ui.slideshow
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +14,6 @@ import com.example.projetkotlindam2019.activity.AddCarActivity
 import com.example.projetkotlindam2019.classes.Car
 import com.example.projetkotlindam2019.classes.MercedesCardAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-
 import org.json.JSONArray
 import java.io.InputStream
 
@@ -29,42 +24,42 @@ class SlideshowFragment : Fragment() {
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<MercedesCardAdapter.ViewHolder>? = null
     private lateinit var slideshowViewModel: SlideshowViewModel
-    private lateinit var array : ArrayList<Car>
+    private lateinit var array: ArrayList<Car>
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         mView = inflater.inflate(R.layout.fragment_slideshow, container, false)
         val rvMercedes = mView.findViewById(R.id.my_recycler_view) as RecyclerView
 
         slideshowViewModel =
-            ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
+                ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
 
 
-        var json : String? = null
+        var json: String? = null
 
 
-        val inputStream : InputStream = mView.context.assets.open("bdd_json.json")
-        json = inputStream.bufferedReader().use { it.readText()}
+        val inputStream: InputStream = mView.context.assets.open("bdd_json.json")
+        json = inputStream.bufferedReader().use { it.readText() }
 
         var jsonarr = JSONArray(json)
         //val array : ArrayList<Car> = ArrayList<Car>()
         array = ArrayList<Car>()
-        val imageArray = listOf(R.drawable.ic_img1,R.drawable.ic_image10,R.drawable.ic_image11,R.drawable.ic_image3,R.drawable.ic_image4,R.drawable.ic_image5,R.drawable.ic_image6,R.drawable.ic_image7,R.drawable.ic_image8,R.drawable.ic_image9)
+        val imageArray = listOf(R.drawable.ic_img1, R.drawable.ic_image10, R.drawable.ic_image11, R.drawable.ic_image3, R.drawable.ic_image4, R.drawable.ic_image5, R.drawable.ic_image6, R.drawable.ic_image7, R.drawable.ic_image8, R.drawable.ic_image9)
 
-        for (i in 0..jsonarr.length()-1){
+        for (i in 0..jsonarr.length() - 1) {
             var jsonobj = jsonarr.getJSONObject(i)
             //val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getString("Consomation")),(jsonobj.getInt("Vitesse_maximum")),(jsonobj.getInt("Chevaux")),(jsonobj.getInt("Poids")),(jsonobj.getString("0_a_100")),(jsonobj.getInt("Année")))
-            val car = Car( (jsonobj.getString("Nom")),(jsonobj.getString("Origine")), imageArray[i],(jsonobj.getString("Année")),(jsonobj.getString("Consomation")),(jsonobj.getString("Vitesse_maximum")),(jsonobj.getString("Chevaux")),(jsonobj.getString("Poids")),(jsonobj.getString("0_a_100")))
+            val car = Car((jsonobj.getString("Nom")), (jsonobj.getString("Origine")), imageArray[i], (jsonobj.getString("Année")), (jsonobj.getString("Consomation")), (jsonobj.getString("Vitesse_maximum")), (jsonobj.getString("Chevaux")), (jsonobj.getString("Poids")), (jsonobj.getString("0_a_100")))
 
             array.add(car)
         }
 
-        if(arguments != null){
-            val myCar : Car = arguments!!.getParcelable("car")
+        if (arguments != null) {
+            val myCar: Car = arguments!!.getParcelable("car")
             //Log.d("",myCar)
             array.add(myCar)
         }
@@ -76,8 +71,8 @@ class SlideshowFragment : Fragment() {
 
         val fab: FloatingActionButton = mView.findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            val intent = Intent(mView.context,AddCarActivity::class.java)
-            intent.putParcelableArrayListExtra("list",array )
+            val intent = Intent(mView.context, AddCarActivity::class.java)
+            intent.putParcelableArrayListExtra("list", array)
             startActivity(intent)
 
         }
@@ -93,7 +88,7 @@ class SlideshowFragment : Fragment() {
         return root*/
     }
 
-    fun addItem(car : Car){
+    fun addItem(car: Car) {
         array.add(car)
     }
 }
