@@ -28,9 +28,9 @@ nécessite [androidStudio](https://developer.android.com/studio/)
 4)Lancer l'application
 ```
 
-![Screenshot](assetReadme/capture.png)
+![Screenshot](assetReadme/Capture.png)
 
-![Screenshot](assetReadme/capture1.PNG)
+![Screenshot](assetReadme/Capture1.PNG)
 
 ![Screenshot](assetReadme/capture3.PNG)
 
