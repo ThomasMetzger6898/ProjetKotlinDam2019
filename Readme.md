@@ -89,4 +89,4 @@ Copyright © 2020 <br />
 Ce projet est sous licence [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) 
 
 ***
- _ Ce README A été généré avec❤️ 
+ _Ce README A été généré avec❤️_
